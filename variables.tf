@@ -7,3 +7,7 @@ variable "environment" {
     default = "Development"
   
 }
+variable "vpc_cidr" {
+    description = "vpc cidr"
+  
+}
