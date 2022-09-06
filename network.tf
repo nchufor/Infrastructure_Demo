@@ -12,6 +12,6 @@ resource "aws_subnet" "public-subnet-1" {
   vpc_id            = "${aws_vpc.development-vpc.id}" 
   availability_zone = "${var.region}a"
   tags = {
-    Name = "${environment}-public-subnet-1"
+    Name = "${var.environment}-public-subnet-1"
   }
 }
