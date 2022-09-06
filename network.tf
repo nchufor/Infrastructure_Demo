@@ -6,3 +6,12 @@ resource "aws_vpc" "development-vpc" {
     Name = "${var.environment}-VPC"
   }
 }
+
+resource "aws_subnet" "public-subnet-1" {
+  cidr_block        = "${var.public_subnet_1_cidr}"
+  vpc_id            = "${aws_vpc.development-vpc.id}" 
+  availability_zone = "${var.region}a"
+  tags = {
+    Name = "${environment}-public-subnet-1"
+  }
+}
